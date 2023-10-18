@@ -8,7 +8,7 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
+    // const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
 
@@ -28,10 +28,12 @@ const Register = () => {
             toast.success("Account created successfully");
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          if (err) {
+            toast.error(err.code);
+          }
+        });
     }
-
-    console.log(name, email, password);
   };
   const styles = {
     backgroundImage: `linear-gradient(115deg,#3f6212,#4d7c0f,#22c55e,#86efac,#bbf7d0,#dcfce7)`,
