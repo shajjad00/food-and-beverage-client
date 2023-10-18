@@ -15,8 +15,8 @@ const Login = () => {
       <div className="flex justify-center py-4 items-center h-max md:h-screen  bg-gray-100">
         <div className="bg-white rounded-lg shadow-2xl flex flex-col md:flex-row w-2/3 max-w-4xl">
           <div className=" w-full md:w-1/2 lg:w-3/5 p-5">
-            <div className="font-bold">
-              <span className="text-green-500">Food </span>and Beverage{" "}
+            <div className="font-bold text-xl">
+              <span className="text-green-500 ">Food </span>and Beverage{" "}
             </div>
             <div className="py-10 text-center">
               <h2 className="text-xl font-bold text-green-500 mb-2">
@@ -77,10 +77,12 @@ const Login = () => {
                 </Link>
               </div>
               <p className="mt-5 text-gray-400">
-                Don't Have an account?{" "}
-                <button className="border-2 border-white font-semibold  rounded-md px-10 py-2 hover:bg-white hover:text-green-500 bg-green-500 text-white hover:border-2 hover:border-green-500">
-                  Sign Up
-                </button>
+                Do not Have an account?{" "}
+                <Link to="/register">
+                  <button className="border-2 border-white font-semibold  rounded-md px-10 py-2 hover:bg-white hover:text-green-500 bg-green-500 text-white hover:border-2 hover:border-green-500">
+                    Sign Up
+                  </button>
+                </Link>
               </p>
             </div>
           </div>
@@ -91,9 +93,11 @@ const Login = () => {
             <p className="mb-10">
               Fill up your information and start journey with us
             </p>
-            <button className="border-2 border-white font-semibold  rounded-md px-10 py-2 hover:bg-white hover:text-green-500">
-              Sign Up
-            </button>
+            <Link to="/register">
+              <button className="border-2 border-white font-semibold  rounded-md px-10 py-2 hover:bg-white hover:text-green-500">
+                Sign Up
+              </button>
+            </Link>
           </div>
         </div>
       </div>

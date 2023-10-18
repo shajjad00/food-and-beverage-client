@@ -3,6 +3,7 @@ import MainLayOut from "../MainLayOut/MainLayOut";
 import Home from "../Pages/Home/Home";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const MyCreatedRoute = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const MyCreatedRoute = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },
