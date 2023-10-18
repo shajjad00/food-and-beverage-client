@@ -1,10 +1,36 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
+
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
+
+    //create account
+    if (password.length < 6) {
+      toast.error("password should be more than 6 char");
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("should contain at least one uppercase character");
+      console.log("should contain uppercase ");
+    } else if (!/[#?!@$%^&*-]/.test(password)) {
+      toast.error("should contain at least one special character");
+    } else {
+      createUser(email, password)
+        .then((result) => {
+          console.log(result.user);
+          if (result.user) {
+            toast.success("Account created successfully");
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+
     console.log(name, email, password);
   };
   const styles = {
