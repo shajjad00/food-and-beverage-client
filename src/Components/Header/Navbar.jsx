@@ -1,6 +1,25 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, userSignOut } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    userSignOut()
+      .then(() => {
+        toast.success("Sign Out Successful");
+        navigate("/login");
+      })
+      .catch((err) => {
+        toast.error(err.code);
+      });
+  };
+
+  console.log(user);
   const elements = (
     <>
       <li>
@@ -57,12 +76,53 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link
+        {/* <Link
           to="/login"
           className="hover:border-2 hover:border-green-500 bg-green-500 text-white border-gray-500 rounded-md px-12  py-2 hover:bg-white hover:text-green-500 font-semibold"
         >
           Login
-        </Link>
+        </Link> */}
+        {user?.uid ? (
+          <div className="dropdown dropdown-end">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img src="https://i.ibb.co/DK4KhQy/sprite.png" />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a
+                  onClick={handleSignOut}
+                  className="hover:border-2 hover:border-green-500 bg-green-500 text-white border-gray-500 rounded-md pl-16 py-2 hover:bg-white hover:text-green-500 font-semibold"
+                >
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link
+            to="/login"
+            className="hover:border-2 hover:border-green-500 bg-green-500 text-white border-gray-500 rounded-md px-12  py-2 hover:bg-white hover:text-green-500 font-semibold"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
