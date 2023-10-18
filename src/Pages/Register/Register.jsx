@@ -1,16 +1,20 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, auth } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
-    // const name = form.name.value;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
+    const image = form.image.value;
 
     //create account
     if (password.length < 6) {
@@ -26,6 +30,17 @@ const Register = () => {
           console.log(result.user);
           if (result.user) {
             toast.success("Account created successfully");
+            updateProfile(auth.currentUser, {
+              displayName: name,
+              photoURL: image,
+            })
+              .then(() => {})
+              .catch((error) => {
+                // An error occurred
+                console.log(error);
+              });
+
+            navigate("/");
           }
         })
         .catch((err) => {
@@ -68,7 +83,9 @@ const Register = () => {
             </div>
             <div className=" w-full lg:w-1/2 rounded-r-lg py-16 lg:py-28 px-12">
               <div className="text-center">
-                <h2 className="text-xl font-bold text-green-500">Register</h2>
+                <h2 className="text-xl font-bold text-green-500 cursor-pointer">
+                  Register
+                </h2>
                 <div className="border-2 w-10 border-green-500 inline-block"></div>
               </div>
               <div className="text-center">
@@ -94,7 +111,13 @@ const Register = () => {
                     required
                   />
                   <input
-                    className="outline-none mt-3 text-white font-semibold py-2 border bg-green-500 w-72 rounded-md"
+                    className="outline-none pl-2 py-2 border border-green-500 w-72 rounded-md mt-4"
+                    type="text"
+                    name="image"
+                    placeholder="Photo Url"
+                  />
+                  <input
+                    className="outline-none mt-3 text-white font-semibold py-2 border bg-green-500 w-72 rounded-md cursor-pointer"
                     type="submit"
                     value="Register"
                     placeholder="Your password"

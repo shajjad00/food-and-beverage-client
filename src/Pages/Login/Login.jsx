@@ -89,7 +89,7 @@ const Login = () => {
                 </div>
                 <input
                   type="submit"
-                  className="border-2 border-green-500  text-green-500 font-semibold  rounded-md px-10 py-2 hover:bg-green-500 hover:text-white"
+                  className="border-2 cursor-pointer border-green-500  text-green-500 font-semibold  rounded-md px-10 py-2 hover:bg-green-500 hover:text-white"
                   value="Sign In"
                 />
               </form>
@@ -109,14 +109,6 @@ const Login = () => {
                   <FaGoogle className="text-sm"></FaGoogle>
                 </Link>
               </div>
-              <p className="mt-5 text-gray-400">
-                Do not Have an account?{" "}
-                <Link to="/register">
-                  <button className="border-2 border-white font-semibold  rounded-md px-10 py-2 hover:bg-white hover:text-green-500 bg-green-500 text-white hover:border-2 hover:border-green-500">
-                    Sign Up
-                  </button>
-                </Link>
-              </p>
             </div>
           </div>
 

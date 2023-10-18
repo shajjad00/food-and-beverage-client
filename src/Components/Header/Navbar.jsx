@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -82,14 +82,15 @@ const Navbar = () => {
         >
           Login
         </Link> */}
-        {user?.uid ? (
+        {user?.email ? (
           <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
               className="btn btn-ghost btn-circle avatar"
             >
+              {/* https://i.ibb.co/DK4KhQy/sprite.png */}
               <div className="w-10 rounded-full">
-                <img src="https://i.ibb.co/DK4KhQy/sprite.png" />
+                <img src={user?.photoURL} />
               </div>
             </label>
             <ul
@@ -98,7 +99,7 @@ const Navbar = () => {
             >
               <li>
                 <a className="justify-between">
-                  Profile
+                  {user?.displayName}
                   <span className="badge">New</span>
                 </a>
               </li>
@@ -106,22 +107,22 @@ const Navbar = () => {
                 <a>Settings</a>
               </li>
               <li>
-                <a
+                <Link
                   onClick={handleSignOut}
-                  className="hover:border-2 hover:border-green-500 bg-green-500 text-white border-gray-500 rounded-md pl-16 py-2 hover:bg-white hover:text-green-500 font-semibold"
+                  className="hover:border-2 hover:border-green-500 bg-green-500 text-white  rounded-md pl-16 py-2 hover:bg-white hover:text-green-500 font-semibold"
                 >
                   Logout
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         ) : (
-          <Link
+          <NavLink
             to="/login"
             className="hover:border-2 hover:border-green-500 bg-green-500 text-white border-gray-500 rounded-md px-12  py-2 hover:bg-white hover:text-green-500 font-semibold"
           >
             Login
-          </Link>
+          </NavLink>
         )}
       </div>
     </div>
