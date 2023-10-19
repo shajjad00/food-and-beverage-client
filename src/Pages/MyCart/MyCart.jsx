@@ -4,7 +4,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import StarRating from "../../Components/StarRating/StarRating";
 
 const MyCart = () => {
-  const { user, loading } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [loggedUserData, setLoggedUserData] = useState(null);
   const email = user?.email;
 
@@ -14,10 +14,6 @@ const MyCart = () => {
     const UserData = cartData.filter((data) => data.email == email);
     setLoggedUserData(UserData);
   }, [cartData, email]);
-
-  if (loading) {
-    <span className="loading loading-spinner text-accent"></span>;
-  }
 
   return (
     <>

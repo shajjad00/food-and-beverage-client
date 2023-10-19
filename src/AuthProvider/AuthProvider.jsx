@@ -14,8 +14,8 @@ import app from "../firebase/firebaseConfig";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState({});
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
@@ -36,12 +36,14 @@ const AuthProvider = ({ children }) => {
   //user sign out
 
   const userSignOut = () => {
+    setLoading(false);
     return signOut(auth);
   };
 
   //google login
 
   const googleSignIn = () => {
+    setLoading(false);
     return signInWithPopup(auth, provider);
   };
 

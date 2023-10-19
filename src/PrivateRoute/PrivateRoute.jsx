@@ -5,13 +5,17 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
+  console.log(loading);
 
-  if (user?.email) {
-    return children;
+  if (loading) {
+    return <span className="loading loading-spinner text-accent"></span>;
+  }
+  if (!user) {
+    return <Navigate to="/login"></Navigate>;
   }
 
-  return <Navigate to="/login"></Navigate>;
+  return children;
 };
 
 PrivateRoute.propTypes = {
