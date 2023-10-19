@@ -1,0 +1,46 @@
+
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/L62kD9x/Coca-Cola-logo.png",
+        "title": "Coca Cola",
+
+        "route":"/cocaCola"
+        
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/PD2Rd37/Pepsi-Co-logo.png",
+        "title": "PepsiCo",
+
+        "route":"/pepsiCo"
+        
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/sqWK8D4/nestle.jpg",
+        "title": "Nestlé",
+        "route":"/nestle"
+        
+    }
+    ,
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/sb2byfS/Starbucks-Corporation-Logo.png",
+        "title": "Starbucks",
+        "route":"/Starbucks"
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/bFwxDct/Mc-Donald-s-logo.png",
+        "title": "McDonald's",
+        "route":"/McDonald"
+       
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/gwL5XzM/pran-food.jpg",
+        "title": "pranFoods",
+        "route":"/nestle"
+    }
+]
