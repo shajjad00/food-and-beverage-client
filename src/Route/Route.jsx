@@ -12,6 +12,7 @@ import Starbucks from "../Pages/Starbucks/Starbucks";
 import McDonalds from "../Pages/McDonald's/McDonalds";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import MyCart from "../Pages/MyCart/MyCart";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const MyCreatedRoute = createBrowserRouter([
   {
@@ -67,7 +68,11 @@ const MyCreatedRoute = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>,
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:4000/productCart"),
       },
     ],
