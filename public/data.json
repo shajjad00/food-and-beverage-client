@@ -4,7 +4,6 @@
         "id": 1,
         "image": "https://i.ibb.co/L62kD9x/Coca-Cola-logo.png",
         "title": "Coca Cola",
-
         "route":"/cocaCola"
         
     },
@@ -12,7 +11,6 @@
         "id": 2,
         "image": "https://i.ibb.co/PD2Rd37/Pepsi-Co-logo.png",
         "title": "PepsiCo",
-
         "route":"/pepsiCo"
         
     },
@@ -41,6 +39,6 @@
         "id": 6,
         "image": "https://i.ibb.co/gwL5XzM/pran-food.jpg",
         "title": "pranFoods",
-        "route":"/nestle"
+        "route":"/pranFoods"
     }
 ]

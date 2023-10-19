@@ -1,8 +1,10 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 import StarRating from "../../Components/StarRating/StarRating";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const CocaCola = () => {
-  const allProduct = useLoaderData();
+  const { allProduct } = useContext(AuthContext);
 
   const cocaColaProduct = allProduct.filter(
     (product) => product.brandName.toLowerCase() == "Coca-cola".toLowerCase()
@@ -10,18 +12,18 @@ const CocaCola = () => {
 
   return (
     <>
-      {cocaColaProduct.map((item) => {
-        const { image, name, price, rating, shortDescription, _id } = item;
-        const ratingNum = rating * 1;
-        const styles = {
-          backgroundImage: `url(${image})`,
-        };
-        return (
-          <div
-            key={item._id}
-            className="py-6"
-          >
-            <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {cocaColaProduct.map((item) => {
+          const { image, name, price, rating, shortDescription, _id } = item;
+          const ratingNum = rating * 1;
+          const styles = {
+            backgroundImage: `url(${image})`,
+          };
+          return (
+            <div
+              key={item._id}
+              className="py-6 flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden"
+            >
               <div
                 className="w-2/5 bg-cover"
                 style={styles}
@@ -44,9 +46,9 @@ const CocaCola = () => {
                 </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </>
   );
 };
