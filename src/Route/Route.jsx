@@ -13,6 +13,7 @@ import McDonalds from "../Pages/McDonald's/McDonalds";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import MyCart from "../Pages/MyCart/MyCart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import UpdateForm from "../Components/UpdateForm/UpdateForm";
 
 const MyCreatedRoute = createBrowserRouter([
   {
@@ -65,6 +66,12 @@ const MyCreatedRoute = createBrowserRouter([
       {
         path: "/McDonald",
         element: <McDonalds></McDonalds>,
+      },
+      {
+        path: "/updateProduct/:id",
+        element: <UpdateForm></UpdateForm>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/product/${params.id}`),
       },
       {
         path: "/myCart",

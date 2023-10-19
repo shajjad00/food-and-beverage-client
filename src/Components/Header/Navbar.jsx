@@ -76,12 +76,6 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {/* <Link
-          to="/login"
-          className="hover:border-2 hover:border-green-500 bg-green-500 text-white border-gray-500 rounded-md px-12  py-2 hover:bg-white hover:text-green-500 font-semibold"
-        >
-          Login
-        </Link> */}
         {user?.email ? (
           <div className="dropdown dropdown-end">
             <label

@@ -12,7 +12,7 @@ const Nestlé = () => {
 
   return (
     <>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto mt-5">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto mt-6">
         {nestleProduct.map((item) => {
           const { image, name, price, rating, shortDescription, _id } = item;
           const ratingNum = rating * 1;
@@ -33,14 +33,21 @@ const Nestlé = () => {
                 <p className="mt-2 text-gray-400 text-sm">
                   {shortDescription.slice(0, 100)}
                 </p>
-                <div className="flex item-center mt-2">
+                <div className="flex item-center my-2">
                   <StarRating ratingNo={ratingNum}></StarRating>
                 </div>
-                <div className="flex item-center justify-between mt-3">
-                  <h1 className="text-[#011b10] font-bold text-xl">${price}</h1>
+                <h1 className="text-gray-400 font-bold text-xl">
+                  Price : ${price}
+                </h1>
+                <div className="flex  items-center justify-between mt-3">
                   <Link to={`/productDetails/${_id}`}>
                     <button className="px-3 py-2 bg-white text-green-500 border border-green-500 text-xs font-bold uppercase rounded">
                       Details
+                    </button>
+                  </Link>
+                  <Link to={`/updateProduct/${_id}`}>
+                    <button className="px-4 bg-green-500 py-2 text-white font-medium rounded-md">
+                      Update
                     </button>
                   </Link>
                 </div>

@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,9 +11,11 @@ const Footer = () => {
               Ready to elevate your data quality?
             </h2>
             <div className="my-4 flex flex-col md:flex-row gap-7">
-              <button className="px-24  rounded-md py-3 bg-white border-2 text-green-500 font-bold hover:bg-green-500 hover:text-white">
-                SIGN UP
-              </button>
+              <Link to="/register">
+                <button className="px-24  rounded-md py-3 bg-white border-2 text-green-500 font-bold hover:bg-green-500 hover:text-white">
+                  SIGN UP
+                </button>
+              </Link>
               <button className="px-16 border border-white rounded-md py-3  text-white font-bold hover:text-green-500 hover:bg-white">
                 PRODUCT TOUR
               </button>
