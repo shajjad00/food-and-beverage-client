@@ -34,7 +34,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar ">
+    <div className="navbar bg-green-500">
       <div className="navbar-start">
         <div className="dropdown ">
           <label
@@ -65,13 +65,13 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className="normal-case hidden md:block text-xl font-semibold"
+          className="normal-case hidden md:block text-xl font-semibold border border-white px-5 py-2 text-gray-300 rounded-md"
         >
-          Food and <span className="text-green-500">Beverage Limited</span>{" "}
+          Food and <span className="">Beverage Limited</span>{" "}
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-medium   text-lg">
+        <ul className="menu menu-horizontal px-1 font-medium text-white  text-lg">
           {elements}
         </ul>
       </div>

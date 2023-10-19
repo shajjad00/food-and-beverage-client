@@ -12,7 +12,7 @@ const McDonalds = () => {
 
   return (
     <>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto mt-5">
         {mcDonaldsProduct.map((item) => {
           const { image, name, price, rating, shortDescription, _id } = item;
           const ratingNum = rating * 1;
