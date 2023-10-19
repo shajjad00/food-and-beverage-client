@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link to="/addProduct">Add Product</Link>
       </li>
       <li>
-        <Link to="/addProduct">Add Product</Link>
+        <Link to="/myCart"> My Cart</Link>
       </li>
     </>
   );

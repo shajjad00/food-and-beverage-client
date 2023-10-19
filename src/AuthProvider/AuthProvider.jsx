@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {
+  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
 } from "firebase/auth";
 import app from "../firebase/firebaseConfig";
@@ -15,16 +17,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const auth = getAuth(app);
-
-  //user tracking
-
-  useEffect(() => {
-    setLoading(false);
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unSubscribe;
-  }, [auth]);
+  const provider = new GoogleAuthProvider();
 
   //create user
 
@@ -33,7 +26,7 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  //user login
+  //user gmail password login
 
   const userSignIn = (email, password) => {
     setLoading(false);
@@ -46,6 +39,22 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  //google login
+
+  const googleSignIn = () => {
+    return signInWithPopup(auth, provider);
+  };
+
+  //user tracking
+
+  useEffect(() => {
+    setLoading(false);
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unSubscribe;
+  }, [auth]);
+
   //auth values
   const values = {
     createUser,
@@ -54,6 +63,7 @@ const AuthProvider = ({ children }) => {
     user,
     userSignOut,
     auth,
+    googleSignIn,
   };
 
   return (
@@ -64,7 +74,7 @@ const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default AuthProvider;

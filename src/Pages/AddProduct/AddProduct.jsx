@@ -34,8 +34,6 @@ const AddProduct = () => {
           toast.success("Product added successfully");
         }
       });
-
-    console.log(name, image, brandName, price, shortDescription);
   };
   return (
     <>
@@ -57,9 +55,9 @@ const AddProduct = () => {
                   <label className="block">Name</label>
                   <input
                     type="text"
-                    placeholder="Your Name"
+                    placeholder="Product Name"
                     name="name"
-                    className="input my-3 input-bordered input-secondary w-full"
+                    className="input my-3 focus:outline-none input-bordered input-secondary w-full"
                   />
                 </div>
                 <div>
@@ -68,7 +66,7 @@ const AddProduct = () => {
                     type="text"
                     placeholder="Image URL"
                     name="image"
-                    className="input my-3 input-bordered input-secondary w-full"
+                    className="input my-3 focus:outline-none input-bordered input-secondary w-full"
                   />
                 </div>
                 <div>
@@ -77,7 +75,7 @@ const AddProduct = () => {
                     type="text"
                     placeholder="Brand Name"
                     name="brandName"
-                    className="input mt-3 input-bordered input-secondary w-full"
+                    className="input focus:outline-none mt-3 input-bordered input-secondary w-full"
                   />
                 </div>
               </div>
@@ -88,7 +86,7 @@ const AddProduct = () => {
                     type="number"
                     placeholder="$50"
                     name="price"
-                    className="input mt-3 input-bordered input-secondary w-full"
+                    className="input my-3 focus:outline-none input-bordered input-secondary w-full"
                   />
                 </div>
                 <div>
@@ -99,13 +97,13 @@ const AddProduct = () => {
                     max="5"
                     placeholder="2"
                     name="rating"
-                    className="input mt-3 input-bordered input-secondary w-full"
+                    className="input mt-3 focus:outline-none input-bordered input-secondary w-full"
                   />
                 </div>
                 <div>
                   <label className="block mt-3">Short description</label>
                   <textarea
-                    className="input mt-3 input-bordered input-secondary w-full"
+                    className="input mt-3 focus:outline-none input-bordered input-secondary w-full outline-none"
                     name="shortDescription"
                     rows="4"
                     cols="50"
@@ -117,7 +115,7 @@ const AddProduct = () => {
             <input
               type="submit"
               value="Add Product"
-              className="input mt-3 input-secondary bg-rose-500 w-full text-white"
+              className="input mt-3 cursor-pointer bg-green-500 w-full text-white"
             />
           </form>
         </div>

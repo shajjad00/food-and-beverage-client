@@ -13,7 +13,7 @@ import toast from "react-hot-toast";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { userSignIn } = useContext(AuthContext);
+  const { userSignIn, googleSignIn } = useContext(AuthContext);
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -37,6 +37,19 @@ const Login = () => {
         if (err.code) {
           toast.error(err.code);
         }
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => {
+        toast.success("Login Successful");
+        navigate("/");
+        console.log(res.user);
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Email already in used");
       });
   };
 
@@ -105,9 +118,12 @@ const Login = () => {
                 <Link className="border-2 border-gray-200 rounded-full p-3 mx-1">
                   <FaLinkedin className="text-sm"></FaLinkedin>
                 </Link>
-                <Link className="border-2 border-gray-200 rounded-full p-3 mx-1">
+                <button
+                  onClick={handleGoogleSignIn}
+                  className="border-2 border-gray-200 rounded-full p-3 mx-1"
+                >
                   <FaGoogle className="text-sm"></FaGoogle>
-                </Link>
+                </button>
               </div>
             </div>
           </div>
