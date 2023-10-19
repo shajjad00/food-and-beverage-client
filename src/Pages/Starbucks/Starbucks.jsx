@@ -38,7 +38,7 @@ const Starbucks = () => {
                 </div>
                 <div className="flex item-center justify-between mt-3">
                   <h1 className="text-[#011b10] font-bold text-xl">${price}</h1>
-                  <Link to={`/CocaCola/${_id}`}>
+                  <Link to={`/productDetails/${_id}`}>
                     <button className="px-3 py-2 bg-white text-green-500 border border-green-500 text-xs font-bold uppercase rounded">
                       Details
                     </button>
