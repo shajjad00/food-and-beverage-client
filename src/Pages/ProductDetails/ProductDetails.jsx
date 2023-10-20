@@ -74,11 +74,6 @@ const ProductDetails = () => {
             <p className="text-gray-700 leading-tight my-4">
               {shortDescription}
             </p>
-            <div className="flex justify-end">
-              <button className="px-3 py-2 text-white bg-green-500 border border-green-500 text-xs font-bold uppercase rounded">
-                Update Details
-              </button>
-            </div>
           </div>
         </div>
       </div>
