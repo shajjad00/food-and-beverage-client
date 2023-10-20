@@ -24,7 +24,7 @@ const MyCart = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Yes, Remove it!",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:4000/productCart/${_id}`, {
@@ -57,7 +57,7 @@ const MyCart = () => {
             return (
               <div
                 key={_id}
-                className="flex py-6"
+                className="flex py-6 px-3 shadow-lg rounded-md bg-gray-100"
               >
                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                   <img
