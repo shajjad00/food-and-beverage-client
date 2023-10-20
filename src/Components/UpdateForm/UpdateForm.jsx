@@ -1,8 +1,44 @@
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const UpdateForm = () => {
   const productData = useLoaderData();
-  const { image, name, price, rating, brandName } = productData;
+  const { image, name, price, rating, brandName, _id } = productData;
+
+  const handleUpdateProduct = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const brandName = form.brandName.value;
+    const image = form.image.value;
+    const productType = form.productType.value;
+    const rating = form.rating.value;
+    const price = form.price.value;
+
+    const productDetails = {
+      name,
+      brandName,
+      image,
+      productType,
+      rating,
+      price,
+    };
+
+    fetch(`http://localhost:4000/product/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.modifiedCount);
+        if (data.modifiedCount) {
+          toast.success("Update Successful");
+        }
+      });
+  };
 
   return (
     <div className="flex items-center justify-center p-12">
@@ -10,7 +46,7 @@ const UpdateForm = () => {
         <label className="mb-5 block text-center text-xl font-semibold text-gray-800 sm:text-xl">
           Update Product Details
         </label>
-        <form>
+        <form onSubmit={handleUpdateProduct}>
           <div className="mb-5">
             <label
               htmlFor="name"
