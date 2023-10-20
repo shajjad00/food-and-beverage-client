@@ -27,7 +27,7 @@ const MyCart = () => {
       confirmButtonText: "Yes, Remove it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:4000/productCart/${_id}`, {
+        fetch(`https://food-and-beverage.vercel.app/productCart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

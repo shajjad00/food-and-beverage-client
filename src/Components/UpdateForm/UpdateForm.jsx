@@ -24,7 +24,7 @@ const UpdateForm = () => {
       price,
     };
 
-    fetch(`http://localhost:4000/product/${_id}`, {
+    fetch(`https://food-and-beverage.vercel.app/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

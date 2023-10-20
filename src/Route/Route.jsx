@@ -45,7 +45,7 @@ const MyCreatedRoute = createBrowserRouter([
       {
         path: "/cocaCola",
         element: <CocaCola></CocaCola>,
-        loader: () => fetch("http://localhost:4000/product"),
+        loader: () => fetch("https://food-and-beverage.vercel.app/product"),
       },
       {
         path: "/productDetails/:id",
@@ -55,7 +55,7 @@ const MyCreatedRoute = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/product/${params.id}`),
+          fetch(`https://food-and-beverage.vercel.app/product/${params.id}`),
       },
       {
         path: "/pepsiCo",
@@ -85,7 +85,7 @@ const MyCreatedRoute = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/product/${params.id}`),
+          fetch(`https://food-and-beverage.vercel.app/product/${params.id}`),
       },
       {
         path: "/myCart",
@@ -94,7 +94,7 @@ const MyCreatedRoute = createBrowserRouter([
             <MyCart></MyCart>,
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:4000/productCart"),
+        loader: () => fetch("https://food-and-beverage.vercel.app/productCart"),
       },
     ],
   },

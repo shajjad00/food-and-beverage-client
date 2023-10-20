@@ -23,7 +23,7 @@ const ProductDetails = () => {
       email,
     };
 
-    fetch("http://localhost:4000/productCart", {
+    fetch("https://food-and-beverage.vercel.app/productCart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

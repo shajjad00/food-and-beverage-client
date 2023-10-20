@@ -20,7 +20,7 @@ const AddProduct = () => {
       rating,
     };
 
-    fetch("http://localhost:4000/product", {
+    fetch("https://food-and-beverage.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

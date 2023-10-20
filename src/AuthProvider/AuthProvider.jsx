@@ -23,7 +23,7 @@ const AuthProvider = ({ children }) => {
   //fetching data
 
   useEffect(() => {
-    fetch("http://localhost:4000/product")
+    fetch("https://food-and-beverage.vercel.app/product")
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
   }, []);
