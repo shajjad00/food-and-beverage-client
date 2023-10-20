@@ -31,7 +31,7 @@ const PepsiCo = () => {
               <div className="w-3/5 p-4">
                 <h1 className="text-[#596e5c] font-bold text-2xl">{name}</h1>
                 <p className="mt-2 text-gray-400 text-sm">
-                  {shortDescription.slice(0, 100)}
+                  {shortDescription.slice(0, 50)}...
                 </p>
                 <div className="flex item-center my-2">
                   <StarRating ratingNo={ratingNum}></StarRating>
