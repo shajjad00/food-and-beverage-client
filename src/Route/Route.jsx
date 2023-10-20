@@ -14,11 +14,13 @@ import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import MyCart from "../Pages/MyCart/MyCart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UpdateForm from "../Components/UpdateForm/UpdateForm";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const MyCreatedRoute = createBrowserRouter([
   {
     path: "/",
     element: <MainLayOut></MainLayOut>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
