@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
-
+import PropTypes from "prop-types";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,11 +9,12 @@ import "swiper/css/scrollbar";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
-const AdvertiseBanner = () => {
+const AdvertiseBanner = ({ title }) => {
+  console.log(title);
   const { bannerImg } = useContext(AuthContext);
 
   const cocaColaAd = bannerImg.filter(
-    (product) => product.title.toLowerCase() == "PepsiCo".toLowerCase()
+    (product) => product.title.toLowerCase() == title.toLowerCase()
   );
 
   console.log(bannerImg);
@@ -30,7 +30,7 @@ const AdvertiseBanner = () => {
       }}
       pagination={{ clickable: true }}
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      onSlideChange={() => console.log()}
     >
       {cocaColaAd.map((adItem) => {
         return (
@@ -52,6 +52,10 @@ const AdvertiseBanner = () => {
       })}
     </Swiper>
   );
+};
+
+AdvertiseBanner.propTypes = {
+  title: PropTypes.string,
 };
 
 export default AdvertiseBanner;

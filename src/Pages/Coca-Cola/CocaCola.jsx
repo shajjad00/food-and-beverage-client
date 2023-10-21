@@ -57,7 +57,7 @@ const CocaCola = () => {
           );
         })}
       </div>
-      <AdvertiseBanner></AdvertiseBanner>
+      <AdvertiseBanner title={"coca-cola"}></AdvertiseBanner>
     </>
   );
 };

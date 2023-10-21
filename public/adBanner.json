@@ -23,19 +23,83 @@
     ,
     {
         "id": 4,
-        "image": "https://i.ibb.co/WK3YYNC/aromatic-frappuccino-table.jpg",
-        "title": "Starbucks"
+        "image": "https://i.ibb.co/yFfgrPc/Sprite-ad.png",
+        "title": "coca-cola",
+        "slogan":"Thirst for Yours"
     },
     {
         "id": 5,
-        "image": "https://i.ibb.co/vwV6Zr0/front-view-tasty-meat-burger-with-cheese-salad-dark-background.jpg",
-        "title": "McDonald's"
+        "image": "https://i.ibb.co/0sdCRwm/coke-ad.jpg",
+        "title": "coca-cola",
+        "slogan":"Taste the Feeling"
        
        
     },
     {
         "id": 6,
-        "image": "https://i.ibb.co/bzhpQ2J/COMMON-BANNER.jpg",
-        "title": "pranFoods"
+        "image": "https://i.ibb.co/dJrrycY/fanta-ad.jpg",
+        "title": "coca-cola",
+        "slogan":"Taste the Feeling"
+    }
+    ,
+    {
+        "id": 7,
+        "image": "https://i.ibb.co/m4cv3mk/nescafe-ad.jpg",
+        "title": "nestle",
+        "slogan":"It all starts with a Nescafe"
+    },
+    {
+        "id": 8,
+        "image": "https://i.ibb.co/w6TNLYS/kitkat-ad.jpg",
+        "title": "nestle",
+        "slogan":"Have a break, have a KitKat"
+       
+       
+    },
+    {
+        "id": 9,
+        "image": "https://i.ibb.co/3N445qv/milo-ad.jpg",
+        "title": "nestle",
+        "slogan":"Taste the Difference"
+    }
+    ,
+    {
+        "id": 10,
+        "image": "https://i.ibb.co/qJTYRsx/Dark-Roast-ad.jpg",
+        "title": "Starbucks",
+        "slogan":"Starbucks Double Shot. Bring on the day"
+    }
+    ,
+    {
+        "id": 11,
+        "image": "https://i.ibb.co/3N445qv/milo-ad.jpg",
+        "title": "Starbucks",
+        "slogan":"Taste the Difference"
+    }
+    ,
+    {
+        "id": 12,
+        "image": "https://i.ibb.co/t243Fyn/roast-ad.jpg",
+        "title": "Starbucks",
+        "slogan":"Feel it in your Heart"
+    },
+   
+    {
+        "id": 13,
+        "image": "https://i.ibb.co/wrQLFSN/milkshake-ad.jpg",
+        "title": "McDonald's",
+        "slogan":"Feel the Taste"
+    },
+    {
+        "id": 14,
+        "image": "https://i.ibb.co/mJT9JLX/pie-ad.png",
+        "title": "McDonald's",
+        "slogan":"Warm up to Our Apple Pie"
+    },
+    {
+        "id": 15,
+        "image": "https://i.ibb.co/yQbBP7c/fat-ad.jpg",
+        "title": "McDonald's",
+        "slogan":"Give me that Filet-o-fish. Give me that fish."
     }
 ]

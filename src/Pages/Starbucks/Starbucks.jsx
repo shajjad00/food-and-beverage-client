@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import StarRating from "../../Components/StarRating/StarRating";
 import { Link } from "react-router-dom";
+import AdvertiseBanner from "../../Components/AdvertiseBanner/AdvertiseBanner";
 
 const Starbucks = () => {
   const { allProduct } = useContext(AuthContext);
@@ -56,6 +57,7 @@ const Starbucks = () => {
           );
         })}
       </div>
+      <AdvertiseBanner title={"Starbucks"}></AdvertiseBanner>
     </>
   );
 };
