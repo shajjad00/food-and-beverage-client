@@ -15,12 +15,10 @@ const Banner = () => {
       .then((res) => res.json())
       .then((data) => setBanner(data));
   }, [setBanner]);
-
-  console.log(banner);
   return (
     <Swiper
       modules={[Navigation, Pagination, EffectCreative]}
-      classNameName="mb-10"
+      className=""
       effect="creative"
       spaceBetween={50}
       slidesPerView={1}
