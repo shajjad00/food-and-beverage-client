@@ -12,7 +12,7 @@ const ImageSlider = () => {
   console.log(allProduct);
 
   return (
-    <div>
+    <div className="dark:bg-[#333]">
       <Swiper
         className="my-10"
         // install Swiper modules
@@ -45,7 +45,7 @@ const ImageSlider = () => {
           return (
             <SwiperSlide key={item._id}>
               <div className="max-w-md bg-gray-100 shadow-lg pb-5">
-                <div className="group relative h-[280px]">
+                <div className="group relative h-[280px] dark:bg-gray-800">
                   <img
                     className="w-[400px] object-cover h-[280px]"
                     src={item.image}

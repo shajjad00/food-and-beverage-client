@@ -10,7 +10,7 @@ const Home = () => {
   console.log(theme);
 
   return (
-    <div className="dark:bg-[#444]">
+    <div className="dark:bg-[#777]">
       <div className="p-4  max-w-screen-xl mx-auto">
         <div>
           <Banner></Banner>

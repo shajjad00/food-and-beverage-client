@@ -12,8 +12,10 @@ const Brands = () => {
   return (
     <>
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-6">Our Top Brands</h2>
-        <p className="italic text-sm mt-2 my-4 text-gray-400">
+        <h2 className="text-4xl font-bold text-center mb-6 dark:text-[#fff]">
+          Our Top Brands
+        </h2>
+        <p className="italic text-sm mt-2 my-4 text-gray-400 dark:text-[#dde]">
           Food brands play an important role in our lives. They provide us with
           a familiar and trusted source of food, and they can also help us to
           make informed choices about what we eat.lets explore our top brands
@@ -35,7 +37,7 @@ const Brands = () => {
               <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
               <div className="absolute inset-0 flex items-end justify-end mr-3">
                 <Link to={route}>
-                  <button className="text-grey-500 bg-white border-2 cursor-pointer border-white text-xl px-6 py-2 font-medium mb-2">
+                  <button className="text-grey-500 bg-white border-2 cursor-pointer border-white dark:text-[#fff] dark:bg-[#aaa] text-xl px-6 py-2 font-medium mb-2">
                     {title}
                   </button>
                 </Link>
