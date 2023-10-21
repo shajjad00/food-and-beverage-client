@@ -46,14 +46,14 @@ const MyCart = () => {
     console.log(_id);
   };
 
-  console.log(loggedUserData);
   return (
     <>
-      <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto my-10">
-        {loggedUserData?.length > 0 ? (
-          loggedUserData?.map((data) => {
+      {loggedUserData?.length > 0 ? (
+        <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto my-10">
+          {loggedUserData?.map((data) => {
             const { image, name, price, rating, _id } = data;
             const ratingNum = rating * 1;
+
             return (
               <div
                 key={_id}
@@ -94,15 +94,29 @@ const MyCart = () => {
                 </div>
               </div>
             );
-          })
-        ) : (
-          <div className="font-bold flex w-full justify-center text-3xl">
-            <p>You have not added any product yet</p>
-          </div>
-        )}
-      </div>
+          })}
+        </div>
+      ) : (
+        <div className="flex  justify-center items-center">
+          <img
+            className="w-[600px]"
+            src="https://i.ibb.co/7r9m52D/no-item.png"
+            alt=""
+          />
+        </div>
+      )}
     </>
   );
 };
 
 export default MyCart;
+
+{
+  /* // 
+
+: (
+          <div className="font-bold flex w-full justify-center text-3xl">
+            <p>You have not added any product yet</p>
+          </div>
+        )} */
+}

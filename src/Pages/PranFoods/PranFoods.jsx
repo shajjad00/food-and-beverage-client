@@ -1,9 +1,13 @@
 const PranFoods = () => {
   return (
     <div>
-      <p className="text-center text-3xl font-bold mt-20">
-        Sorry, There is no item available!
-      </p>
+      <div className="flex  justify-center items-center">
+        <img
+          className="w-[600px]"
+          src="https://i.ibb.co/7r9m52D/no-item.png"
+          alt=""
+        />
+      </div>
     </div>
   );
 };
