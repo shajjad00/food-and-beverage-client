@@ -50,7 +50,7 @@ const ImageSlider = () => {
                     className="w-[400px] object-cover h-[280px]"
                     src={item.image}
                   />
-                  <div className="absolute bottom-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-gray-400 opacity-0 bg-opacity-70 group-hover:h-full group-hover:opacity-100 duration-500">
+                  <div className="absolute bottom-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-gray-700 opacity-0 bg-opacity-70 group-hover:h-full group-hover:opacity-100 duration-500">
                     <h1 className="text-2xl font-semibold text-white text-center">
                       {item.name}
                     </h1>

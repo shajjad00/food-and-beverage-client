@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const { createUser, auth } = useContext(AuthContext);
@@ -21,9 +21,9 @@ const Register = () => {
       toast.error("password should be more than 6 char");
     } else if (!/[A-Z]/.test(password)) {
       toast.error("should contain at least one uppercase character");
-      console.log("should contain uppercase ");
+      console.log("Password should contain uppercase ");
     } else if (!/[#?!@$%^&*-]/.test(password)) {
-      toast.error("should contain at least one special character");
+      toast.error("Password should contain at least one special character");
     } else {
       createUser(email, password)
         .then((result) => {
@@ -124,6 +124,20 @@ const Register = () => {
                     required
                   />
                 </form>
+                <div className="my-3 text-gray-500 w-[200px] mx-auto">
+                  <hr className="" />
+                </div>
+                <p className="mt-4 text-gray-400 font-medium">
+                  Already Have an account ?{" "}
+                  <span>
+                    <Link
+                      className="px-5 py-2 border-2 border-green-500 text-green-500 rounded-lg ml-2"
+                      to="/login"
+                    >
+                      Login
+                    </Link>
+                  </span>
+                </p>
               </div>
             </div>
           </div>
