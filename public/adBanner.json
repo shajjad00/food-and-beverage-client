@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/NNjc7Q5/7up-ad2.jpg",
+        "title": "PepsiCo",
+        "slogan":"You Like It, It Likes You"
+        
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/yYvkQNm/pepsi-ad.jpghttps://i.ibb.co/yYvkQNm/pepsi-ad.jpg",
+        "title": "PepsiCo",
+        "slogan":"That's What I Like"
+        
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/M1Ln811/mountaindew-ad.jpg",
+        "title": "PepsiCo",
+        "slogan":"DO THE DEW"
+        
+    }
+    ,
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/WK3YYNC/aromatic-frappuccino-table.jpg",
+        "title": "Starbucks"
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/vwV6Zr0/front-view-tasty-meat-burger-with-cheese-salad-dark-background.jpg",
+        "title": "McDonald's"
+       
+       
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/bzhpQ2J/COMMON-BANNER.jpg",
+        "title": "pranFoods"
+    }
+]

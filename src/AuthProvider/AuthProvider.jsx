@@ -17,6 +17,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState({});
   const [allProduct, setAllProduct] = useState([]);
+  const [bannerImg, setBannerImg] = useState([]);
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
@@ -90,6 +91,14 @@ const AuthProvider = ({ children }) => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  //advertise banner image json
+
+  useEffect(() => {
+    fetch("adBanner.json")
+      .then((res) => res.json())
+      .then((data) => setBannerImg(data));
+  }, []);
+
   //auth values
   const values = {
     createUser,
@@ -102,6 +111,7 @@ const AuthProvider = ({ children }) => {
     allProduct,
     theme,
     handleThemeSwitch,
+    bannerImg,
   };
 
   return (
