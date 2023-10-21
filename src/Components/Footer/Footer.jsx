@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between">
           <div className="">
             <h2 className=" text-3xl md:text-4xl text-white font-bold">
-              Ready to elevate your data quality?
+              Ready to explore?
             </h2>
             <div className="my-4 flex flex-col lg:flex-row gap-7">
               <Link to="/register">
@@ -22,8 +22,8 @@ const Footer = () => {
             </div>
           </div>
           <img
-            className=" w-24 hidden md:block"
-            src="https://i.ibb.co/zNcPwcy/coca-cola.jpg"
+            className="hidden lg:block rounded-md"
+            src="https://i.ibb.co/4Z1SK39/Untitled-design.png"
             alt=""
           />
         </div>
