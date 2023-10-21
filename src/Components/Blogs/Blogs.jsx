@@ -5,12 +5,12 @@ const Blogs = () => {
         <h3 className=" italic text-lg text-gray-400 dark:text-[#ddd]">
           News And Blog
         </h3>
-        <h2 className="text-4xl mb-6 font-bold dark:text-[#fff]">
-          Our Food and Beverage Blog
-        </h2>
-        <div className="w-[200px] mx-auto h-[4px]">
+        <div className="w-[200px] mt-2 mx-auto h-[4px]">
           <hr />
         </div>
+        <h2 className="text-4xl mb-2 font-bold dark:text-[#fff]">
+          Our Food and Beverage Blog
+        </h2>
         <p className="italic text-sm mt-2 my-4 text-gray-400 dark:text-[#ddd]">
           Food is more than just something we eat to survive. It is a central
           part of our lives, and it connects us to each other and to our

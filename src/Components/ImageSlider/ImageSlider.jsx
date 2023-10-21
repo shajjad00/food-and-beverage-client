@@ -12,12 +12,12 @@ const ImageSlider = () => {
   console.log(allProduct);
 
   return (
-    <div className="dark:bg-[#333]">
+    <div className="dark:bg-[#333] max-w-screen-xl mx-auto p-4">
       <Swiper
-        className="my-10"
+        className="my-10 "
         // install Swiper modules
         modules={[Pagination, Autoplay]}
-        spaceBetween={2}
+        spaceBetween={0}
         slidesPerView={4}
         autoHeight={false}
         autoplay={{
@@ -34,7 +34,7 @@ const ImageSlider = () => {
           },
           "@1.50": {
             slidesPerView: 4,
-            spaceBetween: 6,
+            spaceBetween: 2,
           },
         }}
         pagination={{ clickable: true }}
@@ -44,13 +44,14 @@ const ImageSlider = () => {
         {allProduct.map((item) => {
           return (
             <SwiperSlide key={item._id}>
-              <div className="max-w-md bg-gray-100 shadow-lg pb-5">
+              <div className="max-w-md mx-auto bg-gray-100 shadow-lg">
                 <div className="group relative h-[280px] dark:bg-gray-800">
                   <img
                     className="w-[400px] object-cover h-[280px]"
                     src={item.image}
                   />
-                  <div className="absolute bottom-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-gray-700 opacity-0 bg-opacity-70 group-hover:h-full group-hover:opacity-100 duration-500">
+                  <div className="absolute inset-0 bg-gray-500 opacity-60 rounded-md"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-gray-800 opacity-0 bg-opacity-70 group-hover:h-full group-hover:opacity-100 duration-500">
                     <h1 className="text-2xl font-semibold text-white text-center">
                       {item.name}
                     </h1>

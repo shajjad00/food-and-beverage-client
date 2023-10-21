@@ -15,6 +15,9 @@ const Brands = () => {
         <h2 className="text-4xl font-bold text-center mb-6 dark:text-[#fff]">
           Our Top Brands
         </h2>
+        <div className="w-[200px] mt-2 mx-auto h-[4px]">
+          <hr />
+        </div>
         <p className="italic text-sm mt-2 my-4 text-gray-400 dark:text-[#dde]">
           Food brands play an important role in our lives. They provide us with
           a familiar and trusted source of food, and they can also help us to

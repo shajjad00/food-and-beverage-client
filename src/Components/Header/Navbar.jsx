@@ -6,29 +6,8 @@ import { BsSun, BsMoonFill } from "react-icons/bs";
 
 const Navbar = () => {
   const { user, userSignOut } = useContext(AuthContext);
-  // const [theme, setTheme] = useState(null);
 
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  //     setTheme("dark");
-  //   } else {
-  //     setTheme("light");
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   if (theme === "dark") {
-  //     document.documentElement.classList.add("dark");
-  //   } else {
-  //     document.documentElement.classList.remove("dark");
-  //   }
-  // }, [theme]);
-
-  // const handleThemeSwitch = () => {
-  //   setTheme(theme === "dark" ? "light" : "dark");
-  // };
 
   const { theme, handleThemeSwitch } = useContext(AuthContext);
 
@@ -92,9 +71,13 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className="normal-case hidden md:block text-xl font-semibold border border-white px-5 py-2 text-gray-300 rounded-md"
+          className="normal-case hidden md:block text-xl font-semibold border border-white text-gray-300 rounded-md"
         >
-          Food and <span className="">Beverage Limited</span>{" "}
+          <img
+            className="h-14 w-60"
+            src="https://i.ibb.co/4Z1SK39/Untitled-design.png"
+            alt="Fod and Beverage"
+          />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -145,16 +128,16 @@ const Navbar = () => {
           </NavLink>
         )}
         <div
-          className=" cursor-pointer"
+          className=" cursor-pointer ml-3"
           onClick={handleThemeSwitch}
         >
           {theme == "dark" ? (
             <BsSun
-              className="text-xl font-bold"
+              className="text-4xl font-bold rounded-full "
               style={styles}
             ></BsSun>
           ) : (
-            <BsMoonFill className="text-xl font-bold"></BsMoonFill>
+            <BsMoonFill className="text-4xl font-bold rounded-full"></BsMoonFill>
           )}
         </div>
       </div>
