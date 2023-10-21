@@ -12,7 +12,7 @@ const ImageSlider = () => {
   console.log(allProduct);
 
   return (
-    <div className="dark:bg-[#333] max-w-screen-xl mx-auto p-4">
+    <div className="dark:bg-[#777] max-w-screen-xl mx-auto p-4">
       <Swiper
         className="my-10 "
         // install Swiper modules
