@@ -10,13 +10,13 @@ const Footer = () => {
             <h2 className=" text-3xl md:text-4xl text-white font-bold">
               Ready to elevate your data quality?
             </h2>
-            <div className="my-4 flex flex-col md:flex-row gap-7">
+            <div className="my-4 flex flex-col lg:flex-row gap-7">
               <Link to="/register">
-                <button className="px-24  rounded-md py-3 bg-white border-2 text-green-500 font-bold hover:bg-green-500 hover:text-white">
+                <button className="px-24 md:w-[400px] lg:w-72  rounded-md py-3 bg-white border-2 text-green-500 font-bold hover:bg-green-500 hover:text-white">
                   SIGN UP
                 </button>
               </Link>
-              <button className="px-16 border border-white rounded-md py-3  text-white font-bold hover:text-green-500 hover:bg-white">
+              <button className="px-16 border md:w-[400px] lg:w-72 border-white rounded-md py-3  text-white font-bold hover:text-green-500 hover:bg-white">
                 PRODUCT TOUR
               </button>
             </div>

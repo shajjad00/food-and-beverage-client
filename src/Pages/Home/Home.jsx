@@ -3,6 +3,7 @@ import Brands from "../../Components/Brands/Brands";
 import Banner from "../../Components/Header/Banner";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Blogs from "../../Components/Blogs/Blogs";
+import ImageSlider from "../../Components/ImageSlider/ImageSlider";
 
 const Home = () => {
   const { theme } = useContext(AuthContext);
@@ -18,6 +19,7 @@ const Home = () => {
         <Brands></Brands>
       </div>
       <Blogs></Blogs>
+      <ImageSlider></ImageSlider>
     </div>
   );
 };

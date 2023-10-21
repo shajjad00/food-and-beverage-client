@@ -1,7 +1,7 @@
 const Blogs = () => {
   return (
     <>
-      <div className=" text-center max-w-2xl mx-auto">
+      <div className=" text-center max-w-xl mx-auto">
         <h3 className=" italic text-lg text-gray-400">News And Blog</h3>
         <h2 className="text-4xl mb-6 font-bold">Our Food and Beverage Blog</h2>
         <div className="w-[200px] mx-auto h-[4px]">
@@ -13,7 +13,7 @@ const Blogs = () => {
           cultures
         </p>
       </div>
-      <div className="grid grid-cols-1 max-w-screen-xl mx-auto md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 p-4 max-w-screen-xl mx-auto md:grid-cols-3 gap-6">
         <div className="max-w-md bg-gray-100 shadow-lg pb-5">
           <div>
             <div className="group relative h-[280px]">
@@ -29,7 +29,7 @@ const Blogs = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center p-2">
             <button className="px-5 py-2 my-4 rounded-lg bg-green-500 text-white uppercase font-medium">
               Nestle
             </button>
@@ -83,7 +83,7 @@ const Blogs = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center p-2">
             <button className="px-5 py-2 my-4 rounded-lg bg-green-500 text-white uppercase font-medium">
               Pepsico
             </button>
