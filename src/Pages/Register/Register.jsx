@@ -91,33 +91,33 @@ const Register = () => {
               <div className="text-center">
                 <form onSubmit={handleRegister}>
                   <input
-                    className="outline-none border border-green-500 mt-4 py-2 pl-2 w-72 rounded-md"
+                    className="outline-none border border-green-500 mt-4 py-2 pl-2 max-w-72 md:w-72 rounded-md"
                     type="text"
                     name="name"
                     placeholder="Your Name"
                   />
                   <input
-                    className="my-4 pl-2 py-2 outline-none border border-green-500 w-72 rounded-md"
+                    className="my-4 pl-2 py-2 outline-none border border-green-500 max-w-72 md:w-72 rounded-md"
                     type="email"
                     name="email"
                     placeholder="Your Email"
                     required
                   />
                   <input
-                    className="outline-none pl-2 py-2 border border-green-500 w-72 rounded-md"
+                    className="outline-none pl-2 py-2 border border-green-500 max-w-72 md:w-72 rounded-md"
                     type="password"
                     name="password"
                     placeholder="Your password"
                     required
                   />
                   <input
-                    className="outline-none pl-2 py-2 border border-green-500 w-72 rounded-md mt-4"
+                    className="outline-none pl-2 py-2 border border-green-500 max-w-72 md:w-72 rounded-md mt-4"
                     type="text"
                     name="image"
                     placeholder="Photo Url"
                   />
                   <input
-                    className="outline-none mt-3 text-white font-semibold py-2 border bg-green-500 w-72 rounded-md cursor-pointer"
+                    className="outline-none mt-3 text-white font-semibold py-2 border bg-green-500 w-40 md:w-72 rounded-md cursor-pointer"
                     type="submit"
                     value="Register"
                     placeholder="Your password"
@@ -127,11 +127,11 @@ const Register = () => {
                 <div className="my-3 text-gray-500 w-[200px] mx-auto">
                   <hr className="" />
                 </div>
-                <p className="mt-4 text-gray-400 font-medium">
-                  Already Have an account ?{" "}
-                  <span>
+                <p className="mt-4 text-gray-400 font-medium flex flex-col gap-2 md:flex-row justify-center items-center">
+                  Already Have an account?{" "}
+                  <span className="">
                     <Link
-                      className="px-5 py-2 border-2 border-green-500 text-green-500 rounded-lg ml-2"
+                      className="px-5  py-2 border-2 border-green-500 text-green-500 rounded-lg ml-2"
                       to="/login"
                     >
                       Login

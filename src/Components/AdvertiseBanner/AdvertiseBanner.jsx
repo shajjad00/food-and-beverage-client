@@ -16,8 +16,6 @@ const AdvertiseBanner = ({ title }) => {
   const cocaColaAd = bannerImg.filter(
     (product) => product.title.toLowerCase() == title.toLowerCase()
   );
-
-  console.log(bannerImg);
   return (
     <Swiper
       cssMode={true}

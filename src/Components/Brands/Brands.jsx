@@ -30,7 +30,7 @@ const Brands = () => {
           return (
             <div
               key={data.id}
-              className="relative w-[400px]  mx-auto"
+              className="relative w-[300px] md:w-full  mx-auto"
             >
               <img
                 className="h-64 w-full object-cover rounded-md"

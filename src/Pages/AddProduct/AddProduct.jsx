@@ -1,3 +1,4 @@
+// import axios from "axios";
 import toast from "react-hot-toast";
 
 const AddProduct = () => {
@@ -20,6 +21,14 @@ const AddProduct = () => {
       rating,
     };
 
+    //using axios
+
+    // axios.post("https://food-and-beverage.vercel.app/product",productDetails)
+    // .then(data=>{
+    //   console.log(data.data);
+    // })
+
+    //using fetch
     fetch("https://food-and-beverage.vercel.app/product", {
       method: "POST",
       headers: {

@@ -10,6 +10,9 @@ import {
   signOut,
 } from "firebase/auth";
 import app from "../firebase/firebaseConfig";
+import axios from "axios";
+
+
 
 export const AuthContext = createContext(null);
 
@@ -24,9 +27,17 @@ const AuthProvider = ({ children }) => {
   //fetching data
 
   useEffect(() => {
-    fetch("https://food-and-beverage.vercel.app/product")
-      .then((res) => res.json())
-      .then((data) => setAllProduct(data));
+    //using axios
+
+    axios("https://food-and-beverage.vercel.app/product").then((data) =>
+      setAllProduct(data.data)
+    );
+
+    //using fetch
+
+    // fetch("https://food-and-beverage.vercel.app/product")
+    //   .then((res) => res.json())
+    //   .then((data) => setAllProduct(data));
   }, []);
 
   //create user
@@ -112,6 +123,7 @@ const AuthProvider = ({ children }) => {
     theme,
     handleThemeSwitch,
     bannerImg,
+    setAllProduct,
   };
 
   return (

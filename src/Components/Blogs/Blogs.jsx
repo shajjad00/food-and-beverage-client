@@ -17,8 +17,8 @@ const Blogs = () => {
           cultures
         </p>
       </div>
-      <div className="grid grid-cols-1 p-4 max-w-screen-xl mx-auto md:grid-cols-3 gap-6">
-        <div className="max-w-md bg-gray-100 shadow-lg pb-5 dark:bg-gray-700 ">
+      <div className="grid grid-cols-1 p-4 max-w-screen-xl mx-auto md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-md mx-auto bg-gray-100 shadow-lg pb-5 dark:bg-gray-700 ">
           <div>
             <div className="group relative h-[280px]">
               <img
@@ -45,7 +45,7 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-md bg-gray-100 shadow-lg pb-5 dark:bg-gray-600">
+        <div className="max-w-md mx-auto bg-gray-100 shadow-lg pb-5 dark:bg-gray-600">
           <div>
             <div className="group relative h-[280px]">
               <img
@@ -72,7 +72,7 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-md bg-gray-100 shadow-lg pb-5 dark:bg-gray-600">
+        <div className="max-w-md mx-auto bg-gray-100 shadow-lg pb-5 dark:bg-gray-600">
           <div>
             <div className="group relative h-[280px]">
               <img

@@ -1,8 +1,14 @@
+import axios from "axios";
+import { useContext } from "react";
 import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const UpdateForm = () => {
   const productData = useLoaderData();
+
+  const { setAllProduct } = useContext(AuthContext);
+
   const { image, name, price, rating, brandName, _id } = productData;
 
   const handleUpdateProduct = (e) => {
@@ -24,20 +30,38 @@ const UpdateForm = () => {
       price,
     };
 
-    fetch(`https://food-and-beverage.vercel.app/product/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(productDetails),
-    })
-      .then((res) => res.json())
+    //using axios
+
+    axios
+      .put(
+        `https://food-and-beverage.vercel.app/product/${_id}`,
+        productDetails
+      )
       .then((data) => {
-        console.log(data.modifiedCount);
-        if (data.modifiedCount) {
+        if (data.data.modifiedCount) {
+          axios("https://food-and-beverage.vercel.app/product").then((data) => {
+            setAllProduct(data.data);
+          });
           toast.success("Update Successful");
         }
       });
+
+    //using fetch
+
+    // fetch(`https://food-and-beverage.vercel.app/product/${_id}`, {
+    //   method: "PUT",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(productDetails),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data.modifiedCount);
+    //     if (data.modifiedCount) {
+    //       toast.success("Update Successful");
+    //     }
+    //   });
   };
 
   return (

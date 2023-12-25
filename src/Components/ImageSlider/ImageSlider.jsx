@@ -24,6 +24,10 @@ const ImageSlider = () => {
           delay: 3000,
         }}
         breakpoints={{
+          "@0.50": {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
           "@0.75": {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -33,6 +37,10 @@ const ImageSlider = () => {
             spaceBetween: 4,
           },
           "@1.50": {
+            slidesPerView: 3,
+            spaceBetween: 2,
+          },
+          "@2.00": {
             slidesPerView: 4,
             spaceBetween: 2,
           },
@@ -50,7 +58,7 @@ const ImageSlider = () => {
                     className="w-[400px] object-cover h-[280px]"
                     src={item.image}
                   />
-                  <div className="absolute inset-0 bg-gray-500 opacity-60 rounded-md"></div>
+                  <div className="absolute inset-0 bg-gray-400 opacity-60 rounded-md"></div>
                   <div className="absolute bottom-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-gray-800 opacity-0 bg-opacity-70 group-hover:h-full group-hover:opacity-100 duration-500">
                     <h1 className="text-2xl font-semibold text-white text-center">
                       {item.name}
